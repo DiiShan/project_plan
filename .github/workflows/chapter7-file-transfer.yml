@@ -1,0 +1,27 @@
+name: Chapter 7 verified file transfer
+on:
+  push:
+    paths:
+      - '.github/workflows/chapter7-file-transfer.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Obtain pinned lossless ZIP codec for file-identity verification
+        run: |
+          mkdir codec
+          cd codec
+          npm pack fflate@0.8.2
+          tar -xzf fflate-0.8.2.tgz
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chapter7-transfer-codec
+          path: codec/package
+          retention-days: 1

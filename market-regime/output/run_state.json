@@ -1,0 +1,73 @@
+{
+  "config_fingerprint": "a687aacf071e2b7d867168825731217c647e2520061afa54ec1025d4f69b7373",
+  "phases": {
+    "A": {
+      "completed_at": "2026-11-17T01:44:08+08:00",
+      "indices": 8,
+      "input_fingerprint": "c8d9167ef870896e240e27be5dbab42e3f86d077c831291ec5052ee63870568e",
+      "missing_indices": [
+        "932000"
+      ],
+      "report": "output/manifest/phase_A_report.md",
+      "status": "degraded",
+      "target_indices": 9
+    },
+    "B": {
+      "completed_at": "2026-11-17T01:44:40+08:00",
+      "indices": 8,
+      "report": "output/regime_daily/phase_B_report.md",
+      "skipped": [],
+      "status": "passed"
+    },
+    "C": {
+      "completed_at": "2026-11-17T01:44:40+08:00",
+      "evaluated": 8,
+      "provisional": 0,
+      "report": "output/performance/phase_C_report.md",
+      "skipped": [],
+      "status": "degraded",
+      "vetoed": 8
+    },
+    "D": {
+      "completed_at": "2026-11-17T01:44:41+08:00",
+      "events": 264,
+      "queries": 8,
+      "report": "output/current_state/phase_D_report.md",
+      "skipped": [
+        "000688 成熟长窗口对照有限"
+      ],
+      "status": "degraded"
+    },
+    "E": {
+      "breadth_days": 3852,
+      "completed_at": "2026-11-17T01:45:19+08:00",
+      "document_samples": 5,
+      "pit_financial_rows": 310011,
+      "pit_macro_rows": 7415,
+      "report": "output/research/phase_E_report.md",
+      "skipped": [
+        "当前存活样本宽度有幸存者偏差，历史指数周快照未逐日外推",
+        "未启用交易工具映射，首轮新增特征只做描述"
+      ],
+      "status": "degraded"
+    }
+  },
+  "run_id": "20261117T014316+0800-a687aacf07",
+  "runtime": {
+    "code_hash": "d5741f5b32c21ddef52de8120f7e582c67632ba275e8c89b873920acdefca4a6",
+    "duckdb": "1.5.2",
+    "modules": {
+      "__init__.py": "04c0538bf94d5d2f06dbeea9da2d90fbb0c08a4b1440b7c4f1b0111329ce2752",
+      "__main__.py": "4555d5f56997bd3630daa2c28d3ef72c49e011c3650aceeb1eed3e55b674242c",
+      "analogue.py": "feabcd0b4a43b69e4109f2857f5bb37e48a6aa9f087df272c734b62d659f12d1",
+      "backtest.py": "176f7174736e2be5b551c396dbc97b3c7c133bb110bd109315da0cff07b0c074",
+      "enrich.py": "546bbf5ae2d38490c7ea398315d981b2a7b513841767b58174b01d643ea3848f",
+      "inventory.py": "1ca486862155c5f1e8fd7379e08d43a82fcd37143ccc85026de3c4d3f8ae0a1d",
+      "io.py": "2df570f51c01079f6067a0a7744a29725b49a50a9e2173ad33567453a53073c5",
+      "regime.py": "682eb69c2520c4dff80f5476566582abe7e3ca9187d2d3b65a025f192348756a"
+    },
+    "pandas": "2.3.0",
+    "python": "3.13.5"
+  },
+  "spec_commit": "454cea0355c6fde569a50b32fd84b24380e94d61"
+}
